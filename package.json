@@ -34,6 +34,7 @@
     "html-webpack-plugin": "^5.5.0",
     "less-loader": "^10.2.0",
     "mini-css-extract-plugin": "^2.6.0",
+    "node-xlsx": "^0.21.0",
     "text-loader": "^0.0.1",
     "thread-loader": "^3.0.4",
     "vue-loader": "^17.0.0",
