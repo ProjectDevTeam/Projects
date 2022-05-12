@@ -1,13 +1,12 @@
-import { defineComponent, ref } from "vue";
+import { defineComponent } from "vue";
 import { RouterView } from "vue-router";
 
 export default defineComponent({
-  name: "App",
-  setup() {
+  setup(props) {
     return () => (
-      <>
+      <dic class="pjt1">
         <RouterView />
-      </>
+      </dic>
     );
   },
 });
