@@ -1,5 +1,5 @@
 import { defineComponent, ref } from "vue";
-
+import "./app.less";
 export default defineComponent({
   name: "App",
   setup() {
