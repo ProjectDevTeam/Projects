@@ -20,7 +20,9 @@
   "homepage": "https://github.com/myselfwly/Projects#readme",
   "dependencies": {
     "typescript": "^4.6.3",
-    "vue": "^3.2.33"
+    "vue": "^3.2.33",
+    "vue-router": "^4.0.15",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.9",
