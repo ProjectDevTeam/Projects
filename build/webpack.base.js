@@ -22,12 +22,12 @@ module.exports = {
             //处理css 文件
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
             },
             //处理less文件
             {
                 test: /\.less$/,
-                use: [MiniCssExtractPlugin.loader, "less-loader", "css-loader"],
+                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
             },
             //处理vue文件
             {

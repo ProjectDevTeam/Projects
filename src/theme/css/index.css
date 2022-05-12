@@ -1,0 +1,6 @@
+
+:root{
+        --app-bg: var(--a-color-02);
+        --app-font: var(--a-color-03);
+        --app-font-hov: var(--a-color-01);
+} 
