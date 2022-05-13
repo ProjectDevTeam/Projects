@@ -22,12 +22,45 @@ module.exports = {
             //处理css 文件
             {
                 test: /\.css$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {}
+                    },
+                    /* { loader: 'style-loader' },  */
+                    { loader: 'css-loader' },
+                    { loader: 'postcss-loader', options: { url: false, minimize: false } }
+                ]
             },
             //处理less文件
             {
                 test: /\.less$/,
-                use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "less-loader"],
+                use: [
+                    {
+                        loader: MiniCssExtractPlugin.loader,
+                        options: {}
+                    },
+                    // { loader: 'style-loader' },
+                    { loader: 'css-loader' },
+                    { loader: 'postcss-loader', options: { url: false, minimize: false } },
+                    {
+                        loader: 'less-loader',
+                        options: {
+                            lessOptions: {
+                                javascriptEnabled: true,
+                                modifyVars: {
+                                    'font-size-base': '12px'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        loader: 'style-resources-loader',
+                        options: {
+                            patterns: path.resolve(__dirname, '../src/theme/css/global.less')
+                        }
+                    }
+                ]
             },
             //处理vue文件
             {

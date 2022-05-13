@@ -4,9 +4,9 @@ import { RouterView } from "vue-router";
 export default defineComponent({
   setup(props) {
     return () => (
-      <dic class="pjt1">
+      <div class="pjt1-panel">
         <RouterView />
-      </dic>
+      </div>
     );
   },
 });
