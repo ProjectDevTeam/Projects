@@ -5,7 +5,7 @@ export default defineComponent({
     return () => (
       <div class="pjt1">
         {Object.keys(slots).map((key) => {
-          slots[key]?.();
+          return slots[key]?.();
         })}
       </div>
     );

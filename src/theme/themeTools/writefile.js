@@ -35,4 +35,4 @@ function writeFile(file, data) {
 baseInfo.forEach(item => {
     createCssFile(item.name, item.url)
 })
-writeFile(path.join(__dirname, "../css/index.css"), createIndexStr(themeInfo))
+writeFile(path.join(__dirname, "../css/global.less"), createIndexStr(themeInfo))

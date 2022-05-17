@@ -22,15 +22,12 @@ function createBaseStr(baseColor, theme) {
  * @returns 写入字符串
  */
 function createIndexStr(themeInfo) {
-    var str = `
-:root{`
+    var str = ""
     Object.keys(themeInfo).forEach(key => {
         str += `
-        --${key}: var(--${themeInfo[key]});`
+@${key}: var(--${themeInfo[key]});`
     })
 
-    str += `
-} `
     return str
 }
 module.exports = { createBaseStr, createIndexStr }
