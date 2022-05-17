@@ -18,6 +18,11 @@ module.exports = merge(common, {
             },
         },
         port: 8081, //监听端口
-        proxy: {}, //代理配置
+        proxy: [{
+            context: ['/pjts', '/auth', '/config'],
+            target: 'http://127.0.0.1:3000',
+            changeOrigin: true,
+            secure: false,
+        }] //代理配置
     },
 });

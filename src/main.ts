@@ -1,12 +1,14 @@
 import { createApp } from "vue";
+import "ant-design-vue/dist/antd.less";
 import "./index.less";
-import "./theme/css/darkTheme.css";
 import route from "./router";
 import App from "./App";
-import "ant-design-vue/dist/antd.less";
-
+import { getTheme, getThemeLists } from "./api/theme";
 const app = createApp(App);
 app.use(route);
-console.log(route);
-
-app.mount("#app");
+getTheme().then((res) => {
+  const { theme } = res.data.data;
+  import(`./theme/css/${theme}Theme.css`).then(() => {
+    app.mount("#app");
+  });
+});

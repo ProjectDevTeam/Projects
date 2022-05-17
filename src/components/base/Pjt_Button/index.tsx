@@ -27,4 +27,4 @@ const Pjt_Button = defineComponent({
   },
 });
 
-export default Pjt_Button;
+export { Pjt_Button };
