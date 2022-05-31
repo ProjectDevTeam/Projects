@@ -1,5 +1,11 @@
-import React from 'react'
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
 export default () => {
-	return <div className='div-container'>success</div>
-}
+	return (
+		<div className='div-container'>
+			success
+			<Outlet />
+		</div>
+	);
+};
