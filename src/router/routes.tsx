@@ -7,7 +7,7 @@ const routes: RoutersType = [
 	{
 		path: '/',
 		// element: <App />,
-		redirect: '/home'
+		redirect: '/app'
 	},
 	{
 		path: 'home',
