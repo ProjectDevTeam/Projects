@@ -5,9 +5,8 @@ import App from '../App';
 
 const routes: RoutersType = [
 	{
-		path: '/',
-		// element: <App />,
-		redirect: '/app'
+		path: '',
+		redirect: 'app'
 	},
 	{
 		path: 'home',
