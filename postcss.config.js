@@ -1,5 +1,5 @@
+// postcss.config.js
 module.exports = {
-    plugins: {
-        autoprefixer: { overrideBrowserslist: 'last 5 version' }
-    }
-}
+  ident: "postcss",
+  plugins: [require("autoprefixer")],
+};

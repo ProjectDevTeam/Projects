@@ -1,13 +1,11 @@
-import { defineComponent, ref } from "vue";
-import { RouterView } from "vue-router";
+import React from 'react';
+import { Outlet } from 'react-router-dom';
 
-export default defineComponent({
-  name: "App",
-  setup() {
-    return () => (
-      <>
-        <RouterView />
-      </>
-    );
-  },
-});
+export default () => {
+	return (
+		<div className='div-container'>
+			success
+			<Outlet />
+		</div>
+	);
+};
